@@ -1,0 +1,24 @@
+{
+  "name": "test-front-end-interactive-schools",
+  "version": "1.0.0",
+  "description": "Front End interactive schools project ",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "gulp"
+  },
+  "author": "Ticu Catalin",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.29.1",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^8.0.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-concat-css": "^3.1.0",
+    "gulp-cssnano": "^2.1.3",
+    "gulp-minify": "^3.1.0",
+    "gulp-sass": "^5.1.0",
+    "gulp-sourcemaps": "^3.0.0",
+    "sass": "^1.62.0"
+  }
+}
