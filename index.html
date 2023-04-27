@@ -6,17 +6,28 @@
         <link rel="icon" type="image/x-icon" href="./dist/img/favicon.ico">
         <!-- Styles -->
         <link rel="stylesheet" href="./dist/css/style.css">
+        <!-- swifft carousel -->
+        <link href="https://cdn.jsdelivr.net/npm/swiffy-slider@1.6.0/dist/css/swiffy-slider.min.css" rel="stylesheet" crossorigin="anonymous">
     </head>
 
     <body>
         <div class="no-js" id="no-js">Please enable javascript to benefit for the full experience of our website!</div>
         <main class="main">
-            <div id="hero"></div>
-            <div id="scroller"></div>
+            <div id="hero" class="heroContainer">
+            </div>
+            <div id="scrollerCarousel" class="scrollerContainer">
+            </div>
             <div id="rotator"></div>
         </main>
         <!-- scripts -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js" defer></script>
-        <script src="./dist/js/app-min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollToPlugin.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollTrigger.min.js"></script>
+        <script type="text/javascript" src="./src/js/data/marketingCollection.json"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js" defer></script>
+        <!-- swifft carousel -->
+        <script src="https://cdn.jsdelivr.net/npm/swiffy-slider@1.6.0/dist/js/swiffy-slider.min.js" crossorigin="anonymous" defer></script>
+        <!-- app dist -->
+        <script src="./dist/js/app-min.js" type="module"></script>
     </body>
 </html

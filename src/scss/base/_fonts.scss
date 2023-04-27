@@ -5,4 +5,11 @@
          url('../fonts/CordaleCorp-Regular.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
+    
+    font-family: 'BerlingNovaSansW04-Regular';
+    src: url('../fonts/Berling Nova Sans W04 Regular.woff2') format('woff2'),
+         url('../fonts/Berling Nova Sans W04 Regular.woff') format('woff'),
+         url('../fonts/Berling Nova Sans W04 Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
 }

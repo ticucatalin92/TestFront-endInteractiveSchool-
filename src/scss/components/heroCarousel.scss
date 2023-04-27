@@ -1,0 +1,53 @@
+.heroContainer {
+  height: 100%;
+  display: flex;
+  flex-wrap: nowrap;
+  position: relative;
+
+  .heroSlide {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    background-size: cover;
+    position: relative;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+
+  .titleSlide {
+    color: #ffffff;
+    font-size: 80px;
+    width: 70%;
+    text-align: center;
+    font-family: "CordaleRegular";
+    font-weight: 400;
+    margin: 0px 0px 20px 0px;
+  }
+
+  .descriptionSlide {
+    color: white;
+    font-size: 14px;
+    font-family: "BerlingNovaSansW04-Regular";
+    line-height: 17px;
+    letter-spacing: 0.56px;
+    width: 70%;
+    text-align: center;
+  }
+  .scrollDown {
+    width: 10px;
+    height: 54px;
+    z-index: 99;
+    margin-bottom: 18.3px;
+    margin-top: 9.8px;
+    cursor: pointer;
+  }
+
+  .truncateText {
+    overflow: hidden;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+}
