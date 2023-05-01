@@ -1,5 +1,205 @@
 @import "./base/fonts";
 @import "./base/no-js";
 @import "./base/body";
-@import "./components/heroCarousel";
-@import "./components/scrollerCarousel.scss";
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.general-title {
+  font-size: $generalTitleSize;
+  font-family: "CordaleRegular";
+  color: $generalTitleColor;
+  margin: 0;
+  text-align: center;
+  background-color: #fff;
+  z-index: 9;
+}
+
+.truncate-text {
+  overflow: hidden;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+//hero carousel star
+#hero {
+  overflow: hidden;
+  max-height: 100vh;
+  max-width: 100vw;
+}
+
+#heroInner {
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+
+  
+}
+.hero-slide {
+    flex: 0 0 100vw;
+    max-width: 100vw;
+    img {
+      width: 100vw;
+    }
+    .hero-title {
+      color: $textColor;
+      font-size: 80px;
+      width: 60%;
+      text-align: center;
+      font-family: "CordaleRegular";
+      font-weight: 400;
+      margin: 0;
+      position: absolute;
+      top: 53%;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    .hero-description {
+      color: $textColor;
+      font-size: 14px;
+      font-family: "BerlingNovaSansW04-Regular";
+      line-height: 17px;
+      letter-spacing: 0.56px;
+      width: 60%;
+      text-align: center;
+      position: absolute;
+      top: 70%;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    .hero-down-arrow {
+      position: absolute;
+      bottom: 14vh;
+      left: 50vw;
+      color: #fff;
+      font-size: 14px;
+      top: 74%;
+      left: 50%;
+      transform: translateX(-50%);
+      cursor: pointer;
+    }
+  }
+//hero carousel end
+
+//scroller carousel start
+#scroller {
+  .scroller-slide {
+    height: 450px;
+    margin: 0 53px 10px 50px;
+    position: relative;
+    .scroller-image {
+      width: 100%;
+      height: 100%;
+      object-fit: fill;
+      position: relative;
+    }
+
+    .scroller-slide-title {
+      font-size: $carouselTitleSize;
+      line-height: 53px;
+      font-family: "CordaleRegular";
+      color: #fff;
+      position: absolute;
+      margin: 0;
+      bottom: 30px;
+      left: 59px;
+      background-color: #afacacf2; /// title to be visible if the image on background is white
+      padding: 0 15px;
+      border-radius: 10px;
+    }
+  }
+}
+//scroller carousel end
+
+//scroller rotator start
+
+#rotator {
+  overflow: hidden;
+}
+
+#rotatorInner {
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+
+  > div {
+    max-width: 50%;
+    flex: 0 0 50%;
+  }
+
+  &,
+  * {
+    box-sizing: border-box;
+  }
+}
+
+.colText {
+  position: relative;
+}
+
+.colTextInner {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50px;
+  bottom: 0;
+  height: 100vh;
+  width: 100%;
+  min-width: 100%;
+}
+
+.index-container {
+  background-color: #ffffff55;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.index-animation {
+  position: relative;
+  padding-top: 60%;
+  background-color: #fff;
+  width: 100%;
+}
+
+.rotator-index {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  opacity: 0;
+  text-align: center;
+
+  &:first-child {
+    opacity: 1;
+  }
+}
+
+.rotatorSlide {
+  padding: 50px 0;
+}
+
+.rotatorSlideInner {
+  position: relative;
+}
+
+.rotator-text {
+  position: absolute;
+  bottom: 30px;
+  left: 30px;
+  color: #fff;
+}
+
+.dots-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+//scroller rotator end

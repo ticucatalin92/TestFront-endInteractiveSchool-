@@ -13,23 +13,48 @@
     <body>
         <div class="no-js" id="no-js">Please enable javascript to benefit for the full experience of our website!</div>
         <main class="main">
-            <div id="hero" class="heroContainer">
+            <div id="hero">
+                <div id="heroInner">
+                    
+                </div>
             </div>
 
-            <div id="scrollerCarousel" class="scrollerContainer">
-                <div id="scrollerContainerBody" class="scrollerContainerBody"></div>
+            <div id="scroller">
+                <div class="general-title scroller-title">Carousel Scroller</div>
             </div>
             
-            <div id="rotator" class="rotatorCarousel"></div>
+            <div id="rotator">
+                <div class="general-title rotator-title">Carousel Scroller</div>
+                <div id="rotatorInner">
+                    <div class="colText">
+                        <div class="colTextInner">
+                            <div class="colTextContainer">
+                                <div class="index-container">
+                                    <div class="index-animation" id="indexAnimation">
+                                    </div>
+                                </div>
+                                <div class="dots-container">
+                                    <ul class="dots-list" id="dotsList">
+                                      
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="colImages" id="colImages">
+                       
+                    </div>
+                </div>
+            </div>
         </main>
         <!-- scripts -->
+        <script src="./dist/js/thirdParty/lazysizes.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js" defer></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollToPlugin.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollTrigger.min.js"></script>
         <script type="text/javascript" src="./src/js/data/marketingCollection.json"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js" defer></script>
-        <!-- swifft carousel -->
-        <script src="https://cdn.jsdelivr.net/npm/swiffy-slider@1.6.0/dist/js/swiffy-slider.min.js" crossorigin="anonymous" defer></script>
+         <!-- swifft carousel -->
+         <script src="https://cdn.jsdelivr.net/npm/swiffy-slider@1.6.0/dist/js/swiffy-slider.min.js" crossorigin="anonymous" defer></script>
         <!-- app dist -->
         <script src="./dist/js/app-min.js" type="module"></script>
     </body>
