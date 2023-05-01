@@ -5,6 +5,7 @@ const urlHeroCarouselData = "./src/js/data/marketingCollection.json";
 const urlScrollerCarouselData = "https://dummyjson.com/products/?limit=10";
 
 //url list end
+
 gsap.registerPlugin(ScrollTrigger);
 const tl = gsap.timeline();
 
@@ -20,6 +21,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
   //Create Rotator Carousel
   getDataRotatorCarousel();
+
+  //Scroll to top
+  let scrollToTopArrow = document.getElementById("goToTop");
+  scrollToTopArrow.addEventListener("click", goToTop);
 });
 
 //HERO CAROUSEL START
@@ -48,7 +53,6 @@ function buildHeroCarousel(dataToReceive) {
   const dataList = Object.assign([], dataToReceive);
 
   let onMobile = checkMobile();
-  console.log("onMobile=", onMobile);
   let heroNumberOfSlides;
   let heroInner;
   let hero;
@@ -66,7 +70,7 @@ function buildHeroCarousel(dataToReceive) {
     heroInner.style.width = heroNumberOfSlides * 100 + "vw";
   }
 
-  for (let i = 0; i <= dataList.length-1; i++) {
+  for (let i = 0; i <= dataList.length - 1; i++) {
     if (dataList[i].title != "") {
       if (onMobile) {
         heroSlide = document.createElement("li");
@@ -124,7 +128,7 @@ function buildHeroCarousel(dataToReceive) {
 //HERO CAROUSEL END
 
 // SCROLLER CAROUSEL START
-// get data for hero carousel
+// get data for scroller carousel
 export function getDataForCarouselScroller() {
   let data = [];
   fetch(urlScrollerCarouselData, {
@@ -136,7 +140,7 @@ export function getDataForCarouselScroller() {
       scrollerCarouselBuild(data.products);
     });
 }
-//build hero carousel
+//build scroller carousel
 function scrollerCarouselBuild(scrollerData) {
   let listOfItems = Object.assign([], scrollerData);
   let scroller = document.getElementById("scroller");
@@ -198,7 +202,7 @@ function rotatorCarouselBuild(rotatorData) {
   // right side variables
   let colImages = document.getElementById("colImages");
 
-  for (let i = 0; i < listOfItems.length ; i++) {
+  for (let i = 0; i < listOfItems.length; i++) {
     //left side start
     rotatorIndex = document.createElement("div");
     rotatorIndex.classList.add("rotator-index");
@@ -208,10 +212,23 @@ function rotatorCarouselBuild(rotatorData) {
     rotatorIndexDescription.innerHTML = listOfItems[i].description;
     rotatorIndex.appendChild(rotatorIndexDescription);
 
+    let rotatorIndexNumberBox = document.createElement("div");
+    rotatorIndexNumberBox.classList.add("rotator-index-number-box");
+    rotatorIndex.appendChild(rotatorIndexNumberBox);
+
     let rotatorIndexNumber = document.createElement("span");
     rotatorIndexNumber.classList.add("rotator-index-number");
-    rotatorIndexNumber.innerHTML = i;
-    rotatorIndex.appendChild(rotatorIndexNumber);
+    rotatorIndexNumber.innerHTML = i + 1;
+    rotatorIndexNumberBox.appendChild(rotatorIndexNumber);
+
+    let rotatorIndexNumberLine = document.createElement("div");
+    rotatorIndexNumberLine.classList.add("rotator-index-number-line");
+    rotatorIndexNumberBox.appendChild(rotatorIndexNumberLine);
+
+    let rotatorIndexLength = document.createElement("span");
+    rotatorIndexLength.classList.add("rotator-index-length");
+    rotatorIndexLength.innerHTML = listOfItems.length;
+    rotatorIndexNumberBox.appendChild(rotatorIndexLength);
 
     indexAnimation.appendChild(rotatorIndex);
 
@@ -239,6 +256,7 @@ function rotatorCarouselBuild(rotatorData) {
     let rotatorTextArrow = document.createElement("div");
     rotatorTextArrow.classList.add("rotator-text-arrow");
     rotatorTextArrow.innerHTML = "&#8594;";
+    rotatorTextArrow.addEventListener("click", gotoNewLink);
     rotatorText.appendChild(rotatorTextArrow);
 
     rotatorSlideInner.appendChild(rotatorText);
@@ -258,10 +276,6 @@ function rotatorCarouselBuild(rotatorData) {
 
     // //right side ends
   }
-  let rotatorIndexLength = document.createElement("span");
-  rotatorIndexLength.classList.add("rotator-index-length");
-  rotatorIndexLength.innerHTML = listOfItems.length;
-  rotatorIndex.appendChild(rotatorIndexLength);
 
   // stick the title for rotator carousel
   tl.to(".rotator-title", {
@@ -277,7 +291,6 @@ function rotatorCarouselBuild(rotatorData) {
     },
   });
   // end
-
   // animate the rotator inner
   tl.to(".colTextContainer", {
     duration: 8,
@@ -301,6 +314,11 @@ function goToScrollerSection() {
   pointToScrollTo.scrollIntoView({ behavior: "smooth", block: "start" });
 }
 
+function goToTop() {
+  let pointToHero = document.getElementById("hero");
+  pointToHero.scrollIntoView({ behavior: "smooth", block: "start" });
+}
+
 // to check if the user is on mobile device
 function checkMobile() {
   let check = false;
@@ -316,4 +334,8 @@ function checkMobile() {
       check = true;
   })(navigator.userAgent || navigator.vendor || window.opera);
   return check;
+}
+
+function gotoNewLink() {
+  window.open("https://www.google.com/", "_blank");
 }

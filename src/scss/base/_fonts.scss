@@ -1,15 +1,29 @@
 @font-face {
-    font-family: 'CordaleRegular';
-    src: url('../fonts/CordaleCorp-Regular.woff2') format('woff2'),
-         url('../fonts/CordaleCorp-Regular.woff') format('woff'),
-         url('../fonts/CordaleCorp-Regular.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-    
-    font-family: 'BerlingNovaSansW04-Regular';
-    src: url('../fonts/Berling Nova Sans W04 Regular.woff2') format('woff2'),
-         url('../fonts/Berling Nova Sans W04 Regular.woff') format('woff'),
-         url('../fonts/Berling Nova Sans W04 Regular.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
+  font-family: "CordaleRegular";
+  src: url("../fonts/CordaleCorp-Regular.woff2") format("woff2"),
+    url("../fonts/CordaleCorp-Regular.woff") format("woff"),
+    url("../fonts/CordaleCorp-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+
+  font-family: "BerlingNovaSansW04-Regular";
+  src: url("../fonts/Berling Nova Sans W04 Regular.woff2") format("woff2"),
+    url("../fonts/Berling Nova Sans W04 Regular.woff") format("woff"),
+    url("../fonts/Berling Nova Sans W04 Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+
+  font-family: "Cormorant Garamond";
+  src: url("../fonts/CormorantGaramond-Regular.ttf") format("truetype"),
+    url("../fonts/CormorantGaramond-Regular.woff") format("woff"),
+    url("../fonts/CormorantGaramond-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  
+  font-family: "Cormorant Garamond Italic";
+  src: url("../fonts/CormorantGaramond-Italic.ttf") format("truetype"),
+    url("../fonts/CormorantGaramond-Italic.woff") format("woff"),
+    url("../fonts/CormorantGaramond-Italic.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
 }
